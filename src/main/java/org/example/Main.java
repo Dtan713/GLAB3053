@@ -20,3 +20,11 @@ String BookName = cc.getBookName();
 } catch (SQLException e) {
         e.printStackTrace();
 }
+
+        System.out.println("----Book information is updating -----");
+Books Bookupdating = new Books();
+Bookupdating.setIsbn(3);
+Bookupdating.setBookName("Algorithms Book");
+boolean result = bookDao.updateBook(Bookupdating, 3);
+System.out.println(result);
+

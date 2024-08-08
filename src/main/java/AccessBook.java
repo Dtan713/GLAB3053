@@ -35,6 +35,16 @@ public class AccessBook {
         BookList.add(b4);
 
         bookDao.saveBook(BookList);
+
+        boolean a = bookDao.deleteBook(4); // 4 is a id of book
+        if(a == true) {
+            System.out.println("Record is deleted");
+        }
+        else
+        {
+            System.out.println("Record is not deleted");
+        }
+
     }
 }
 
